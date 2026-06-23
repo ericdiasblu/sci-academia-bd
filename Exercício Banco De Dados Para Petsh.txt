@@ -1,0 +1,44 @@
+Exercício: Banco De Dados Para Petshop
+Um petshop deseja criar um sistema para controlar seus atendimentos, clientes, animais, serviços e funcionários.
+O petshop atende vários clientes. De cada cliente, devem ser registrados o nome, telefone, e-mail e endereço.
+Cada cliente pode ter um ou mais animais cadastrados. De cada animal, o petshop deseja guardar o nome, espécie, raça, data de nascimento e peso. 
+Um animal pertence a apenas um cliente.
+O petshop oferece vários serviços, como banho, tosa, corte de unha, consulta veterinária e vacinação. De cada serviço, devem ser registrados a descrição e o valor.
+O petshop também possui funcionários. De cada funcionário, devem ser armazenados o nome, telefone e cargo.
+Quando um cliente leva um animal ao petshop, é aberto um atendimento. Nesse atendimento, devem ser registrados a data, o animal atendido, 
+o funcionário responsável, o status do atendimento e o valor total.
+Um atendimento pode ter um ou mais serviços realizados. O mesmo serviço pode aparecer em vários atendimentos. Por isso, deve existir uma
+ tabela para registrar os serviços feitos em cada atendimento, incluindo o valor cobrado pelo serviço.
+Tarefa Dos Alunos
+Com base no texto, identifique as tabelas necessárias e crie a estrutura do banco de dados em Firebird.
+Os alunos devem definir:
+campos de cada tabela;
+tipos de dados adequados;
+chaves primárias;
+chaves estrangeiras;
+relacionamentos entre as tabelas.
+
+--------
+
+IDEIA:
+
+CLIENTE (codigo, nome, telefone, email, endereco) X
+
+ANIMAL (codigo, nome, codigo_raca, data_nascimento, peso, codigo_cliente) X
+
+ESPECIE (codigo, descricao) X
+
+RACA (codigo, descricao, codigo_especie) X
+
+CARGO(codigo, descricao) X
+
+SERVICO (codigo, descricao, valor) X
+
+FUNCIONARIO (codigo, nome, telefone, codigo_cargo) X
+
+STATUS (codigo, descricao) X
+
+ATENDIMENTO (codigo, data, valor_total ,codigo_animal, codigo_funcionario, codigo_status ) X
+
+ATENDIMENTO_SERVICO (codigo, codigo_atendimento ,codigo_servico, valor_cobrado_servico)
+

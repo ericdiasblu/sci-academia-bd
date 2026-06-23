@@ -1,0 +1,21 @@
+-- Quantidade De Seleções Por Continente
+-- Quantidade De Jogos Por Estádio
+-- Quantidade De Jogos Por Cidade
+-- Quantidade De Jogos Por Fase
+-- Total De Gols Por Fase
+-- Média De Gols Por Fase
+-- Quantidade De Jogos Apitados Por Árbitro
+-- Quantidade De Árbitros Por País
+-- Total De Gols Como Mandante Por Seleção
+-- Total De Gols Como Mandante Por Seleção
+-- Quantidade De Jogos Por Seleção Como Mandante
+-- Quantidade De Jogos Por Seleção Como Visitante
+-- Total De Público Possível Por Cidade
+-- Fases Com Mais De Um Jogo
+
+-- Criar uma consulta que mostre o placar completo dos jogos no seguinte formato:
+          Brasil 2 x 0 México
+          Argentina 1 x 1 Japão
+          Franca 3 x 1 Marrocos
+
+

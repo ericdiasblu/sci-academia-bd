@@ -9,8 +9,8 @@ c.bddocumentocliente,
 c.bdenderecocliente
 FROM tcliente c
 JOIN ttipodocumento td on (td.bdcodtpdocumento = c.bdcodtipodocumento)
-JOIN tuf u on (u.bdcoduf = c.bdcoduf)
---GROUP BY u.bddescuf
+JOIN tcidade ci on (ci.bdcodcidade = c.bdcodcidade)
+JOIN tuf u on (u.bdcoduf = c.bdcodcidade)
 ORDER BY u.bddescuf, td.bddescdocumento, c.bddocumentocliente;
 
 -- 2.
@@ -20,7 +20,8 @@ u.bddescuf,
 SUM(nf.bdvalortotal) as BDTOTALBRUTO
 FROM tnotafiscal nf
 JOIN tcliente c on (c.bdcodcliente = nf.bdcodcliente)
-JOIN tuf u on (u.bdcoduf = c.bdcoduf)
+JOIN tcidade ci on (ci.bdcodcidade = c.bdcodcidade)
+JOIN tuf u on (u.bdcoduf = c.bdcodcidade)
 GROUP BY u.bddescuf
 ORDER BY SUM(nf.bdvalortotal) desc;
 
@@ -36,7 +37,8 @@ FROM tnotafiscal nf
 JOIN tnotafiscalitem nfi on (nfi.bdcodnota = nf.bdcodnotafiscal)
 JOIN tproduto p on (p.bdcodproduto = nfi.bdcodproduto)
 JOIN tcliente c on (c.bdcodcliente = nf.bdcodcliente)
-JOIN tuf u on (u.bdcoduf = c.bdcoduf)
+JOIN tcidade ci on (ci.bdcodcidade = c.bdcodcidade)
+JOIN tuf u on (u.bdcoduf = c.bdcodcidade)
 JOIN taliquotaicms ai on (ai.bdcoduf = u.bdcoduf);
 
 -- 4.
